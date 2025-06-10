@@ -2,7 +2,7 @@
 import { useState, useMemo } from 'react';
 import { Search, ShoppingCart } from 'lucide-react';
 import EnhancedArtworkCard from '../components/EnhancedArtworkCard';
-import ShoppingCart as ShoppingCartComponent from '../components/ShoppingCart';
+import ShoppingCartComponent from '../components/ShoppingCart';
 import { ArtworkData } from '../types/artwork';
 import { useCart } from '../contexts/CartContext';
 import artworkData from '../data/artworks.json';
