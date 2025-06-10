@@ -1,0 +1,88 @@
+
+{
+  "artist": {
+    "name": "Aakhya",
+    "bio": "An accomplished artist specializing in contemporary paintings and traditional artwork. With over a decade of experience, Aakhya creates pieces that blend classical techniques with modern artistic vision, capturing emotions and stories through vibrant colors and intricate details.",
+    "phone": "7379340224",
+    "email": "aakhya.artist@gmail.com",
+    "socialMedia": {
+      "instagram": "@aakhya_artist",
+      "facebook": "aakhya.artist"
+    },
+    "statement": "Art is the bridge between imagination and reality. Through my work, I strive to create pieces that not only beautify spaces but also evoke deep emotions and tell meaningful stories."
+  },
+  "artworks": [
+    {
+      "id": "royal-garden-1",
+      "title": "Royal Garden Dreams",
+      "description": "A mesmerizing piece that captures the essence of a mystical royal garden with vibrant florals and golden accents.",
+      "price": 2500,
+      "size": "36x24 inches",
+      "medium": "Oil on canvas",
+      "category": "painting",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "celestial-portrait-2",
+      "title": "Celestial Portrait",
+      "description": "An ethereal portrait that combines traditional portraiture with celestial elements, creating a dreamlike composition.",
+      "price": 1800,
+      "size": "24x18 inches",
+      "medium": "Acrylic on canvas",
+      "category": "portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "golden-sunset-3",
+      "title": "Golden Sunset Majesty",
+      "description": "A breathtaking landscape capturing the golden hour with rich textures and warm tones that evoke feelings of serenity.",
+      "price": 2200,
+      "size": "30x20 inches",
+      "medium": "Oil on canvas",
+      "category": "landscape",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": false
+    },
+    {
+      "id": "abstract-royalty-4",
+      "title": "Abstract Royalty",
+      "description": "A bold abstract composition using royal colors and gold leaf accents, representing power and elegance.",
+      "price": 3200,
+      "size": "48x36 inches",
+      "medium": "Mixed media on canvas",
+      "category": "abstract",
+      "imageUrl": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": true
+    },
+    {
+      "id": "floral-elegance-5",
+      "title": "Floral Elegance",
+      "description": "Delicate watercolor florals with intricate details, perfect for adding grace and beauty to any space.",
+      "price": 950,
+      "size": "16x12 inches",
+      "medium": "Watercolor",
+      "category": "floral",
+      "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": false
+    },
+    {
+      "id": "urban-sketch-6",
+      "title": "Urban Chronicles",
+      "description": "A detailed pencil sketch capturing the essence of city life with architectural elements and human emotions.",
+      "price": 680,
+      "size": "14x10 inches",
+      "medium": "Pencil on paper",
+      "category": "sketch",
+      "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": false
+    }
+  ]
+}
