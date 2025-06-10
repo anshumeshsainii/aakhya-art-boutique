@@ -22,9 +22,35 @@ export interface Artwork {
   imageUrl: string;
   available: boolean;
   featured: boolean;
+  limitedEdition?: boolean;
+  arPreviewUrl?: string;
+}
+
+export interface CartItem {
+  artwork: Artwork;
+  quantity: number;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  review: string;
+  date: string;
+  rating: number;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  imageUrl: string;
 }
 
 export interface ArtworkData {
   artist: Artist;
   artworks: Artwork[];
+  testimonials: Testimonial[];
+  blogPosts: BlogPost[];
 }

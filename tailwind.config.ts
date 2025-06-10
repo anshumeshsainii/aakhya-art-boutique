@@ -66,8 +66,8 @@ export default {
 				royal: {
 					purple: '#3A1078',
 					gold: '#F9C74F',
-					blue: '#277BC0',
-					cream: '#F8F9FA',
+					emerald: '#2D7D46',
+					cream: '#F8F5F2',
 					'purple-light': '#5B2C87',
 					'gold-light': '#FFD23F'
 				}
@@ -113,17 +113,43 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'slide-up': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(100%)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'shine': {
+					from: {
+						transform: 'translateX(-100%)'
+					},
+					to: {
+						transform: 'translateX(100%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'scale-in': 'scale-in 0.4s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'shine': 'shine 2s ease-in-out infinite'
 			},
 			fontFamily: {
+				'cormorant': ['Cormorant Garamond', 'serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
 				'lora': ['Lora', 'serif']
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			}
 		}
 	},

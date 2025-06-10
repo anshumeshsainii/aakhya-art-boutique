@@ -15,74 +15,147 @@
     {
       "id": "royal-garden-1",
       "title": "Royal Garden Dreams",
-      "description": "A mesmerizing piece that captures the essence of a mystical royal garden with vibrant florals and golden accents.",
+      "description": "A mesmerizing piece that captures the essence of a mystical royal garden with vibrant florals and golden accents, creating an enchanting atmosphere of luxury and serenity.",
       "price": 2500,
       "size": "36x24 inches",
       "medium": "Oil on canvas",
       "category": "painting",
       "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": true
+      "featured": true,
+      "limitedEdition": true
     },
     {
       "id": "celestial-portrait-2",
       "title": "Celestial Portrait",
-      "description": "An ethereal portrait that combines traditional portraiture with celestial elements, creating a dreamlike composition.",
+      "description": "An ethereal portrait that combines traditional portraiture with celestial elements, creating a dreamlike composition that speaks to the soul and transcends earthly beauty.",
       "price": 1800,
       "size": "24x18 inches",
       "medium": "Acrylic on canvas",
       "category": "portrait",
       "imageUrl": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": true
+      "featured": true,
+      "limitedEdition": false
     },
     {
       "id": "golden-sunset-3",
       "title": "Golden Sunset Majesty",
-      "description": "A breathtaking landscape capturing the golden hour with rich textures and warm tones that evoke feelings of serenity.",
+      "description": "A breathtaking landscape capturing the golden hour with rich textures and warm tones that evoke feelings of serenity and wonder, perfect for any sophisticated space.",
       "price": 2200,
       "size": "30x20 inches",
       "medium": "Oil on canvas",
       "category": "landscape",
       "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": false
+      "featured": false,
+      "limitedEdition": false
     },
     {
       "id": "abstract-royalty-4",
       "title": "Abstract Royalty",
-      "description": "A bold abstract composition using royal colors and gold leaf accents, representing power and elegance.",
+      "description": "A bold abstract composition using royal colors and gold leaf accents, representing power and elegance while challenging conventional artistic boundaries.",
       "price": 3200,
       "size": "48x36 inches",
       "medium": "Mixed media on canvas",
       "category": "abstract",
       "imageUrl": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": true
+      "featured": true,
+      "limitedEdition": true
     },
     {
       "id": "floral-elegance-5",
       "title": "Floral Elegance",
-      "description": "Delicate watercolor florals with intricate details, perfect for adding grace and beauty to any space.",
+      "description": "Delicate watercolor florals with intricate details, perfect for adding grace and beauty to any space. Each petal is painted with precision and love.",
       "price": 950,
       "size": "16x12 inches",
       "medium": "Watercolor",
       "category": "floral",
       "imageUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": false
+      "featured": false,
+      "limitedEdition": false
     },
     {
       "id": "urban-sketch-6",
       "title": "Urban Chronicles",
-      "description": "A detailed pencil sketch capturing the essence of city life with architectural elements and human emotions.",
+      "description": "A detailed pencil sketch capturing the essence of city life with architectural elements and human emotions, showcasing the beauty in everyday urban scenes.",
       "price": 680,
       "size": "14x10 inches",
       "medium": "Pencil on paper",
       "category": "sketch",
       "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=center",
       "available": true,
-      "featured": false
+      "featured": false,
+      "limitedEdition": false
+    },
+    {
+      "id": "emerald-dreams-7",
+      "title": "Emerald Dreams",
+      "description": "A stunning emerald-themed composition that brings nature's tranquility indoors, featuring rich greens and gold highlights that create a sense of luxury and peace.",
+      "price": 2800,
+      "size": "32x24 inches",
+      "medium": "Acrylic on canvas",
+      "category": "abstract",
+      "imageUrl": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": true,
+      "limitedEdition": true
+    },
+    {
+      "id": "royal-portrait-8",
+      "title": "Royal Heritage",
+      "description": "A majestic portrait capturing the essence of royalty with deep purples and gold accents, representing strength, dignity, and timeless elegance.",
+      "price": 3500,
+      "size": "40x30 inches",
+      "medium": "Oil on canvas",
+      "category": "portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=800&h=600&fit=crop&crop=center",
+      "available": true,
+      "featured": true,
+      "limitedEdition": true
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "Priya Sharma",
+      "review": "Aakhya's artwork transformed my living space completely. The 'Royal Garden Dreams' piece is absolutely stunning and brings so much elegance to my home.",
+      "date": "2024-05-20",
+      "rating": 5
+    },
+    {
+      "id": "test-2",
+      "name": "Raj Patel",
+      "review": "I commissioned a custom piece from Aakhya and the experience was exceptional. Her attention to detail and artistic vision exceeded all my expectations.",
+      "date": "2024-05-15",
+      "rating": 5
+    },
+    {
+      "id": "test-3",
+      "name": "Meera Krishnan",
+      "review": "The quality of Aakhya's work is unmatched. I've purchased three pieces now and each one is a masterpiece. Highly recommend to any art lover!",
+      "date": "2024-05-10",
+      "rating": 5
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "blog-1",
+      "title": "The Journey of Creating 'Royal Garden Dreams'",
+      "excerpt": "Discover the inspiration and process behind one of my most beloved pieces...",
+      "content": "Creating 'Royal Garden Dreams' was a journey that took me through memories of ancient palace gardens and the dreams of what paradise might look like...",
+      "date": "2024-05-15",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop&crop=center"
+    },
+    {
+      "id": "blog-2",
+      "title": "Working with Gold Leaf: Techniques and Tips",
+      "excerpt": "Learn about the ancient art of gold leaf application in modern artwork...",
+      "content": "Gold leaf has been used in art for centuries, adding luxury and permanence to artworks. In this post, I'll share my techniques...",
+      "date": "2024-05-10",
+      "imageUrl": "https://images.unsplash.com/photo-1549887534-1541e9326642?w=800&h=400&fit=crop&crop=center"
     }
   ]
 }

@@ -1,8 +1,10 @@
 
 import { useState, useMemo } from 'react';
-import { Search } from 'lucide-react';
-import ArtworkCard from '../components/ArtworkCard';
+import { Search, ShoppingCart } from 'lucide-react';
+import EnhancedArtworkCard from '../components/EnhancedArtworkCard';
+import ShoppingCart as ShoppingCartComponent from '../components/ShoppingCart';
 import { ArtworkData } from '../types/artwork';
+import { useCart } from '../contexts/CartContext';
 import artworkData from '../data/artworks.json';
 
 const Gallery = () => {
@@ -11,6 +13,9 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  
+  const { state } = useCart();
 
   const categories = ['all', ...new Set(data.artworks.map(artwork => artwork.category))];
   const priceRanges = [
@@ -59,22 +64,40 @@ const Gallery = () => {
   }, [data.artworks, searchTerm, selectedCategory, priceRange, sortBy]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-royal-cream via-white to-royal-cream/50">
       {/* Header */}
-      <div className="bg-white shadow-sm">
+      <div className="bg-white/80 backdrop-blur-md shadow-lg border-b border-royal-gold/20">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-playfair font-bold text-royal-purple mb-4">
-            Art Gallery
-          </h1>
-          <p className="text-lg text-gray-700">
-            Discover {data.artworks.length} exquisite pieces of artwork
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-4xl font-cormorant font-bold text-royal-purple mb-4">
+                Art Gallery
+              </h1>
+              <p className="text-lg text-gray-700">
+                Discover {data.artworks.length} exquisite pieces of artwork
+              </p>
+            </div>
+            
+            {/* Cart Button */}
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative gold-button flex items-center space-x-2"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              <span>Cart</span>
+              {state.items.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {state.items.length}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+        <div className="glass-morphism rounded-xl shadow-lg p-6 mb-8 luxury-shadow">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
@@ -84,7 +107,7 @@ const Gallery = () => {
                 placeholder="Search artwork..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-royal-gold/30 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent bg-white/80 backdrop-blur-sm"
               />
             </div>
 
@@ -92,7 +115,7 @@ const Gallery = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent"
+              className="w-full px-4 py-3 border border-royal-gold/30 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent bg-white/80 backdrop-blur-sm"
             >
               {categories.map(category => (
                 <option key={category} value={category}>
@@ -105,7 +128,7 @@ const Gallery = () => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent"
+              className="w-full px-4 py-3 border border-royal-gold/30 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent bg-white/80 backdrop-blur-sm"
             >
               {priceRanges.map(range => (
                 <option key={range.value} value={range.value}>
@@ -118,7 +141,7 @@ const Gallery = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent"
+              className="w-full px-4 py-3 border border-royal-gold/30 rounded-lg focus:ring-2 focus:ring-royal-purple focus:border-transparent bg-white/80 backdrop-blur-sm"
             >
               <option value="newest">Featured First</option>
               <option value="price-low">Price: Low to High</option>
@@ -130,7 +153,7 @@ const Gallery = () => {
 
         {/* Results */}
         <div className="mb-6">
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-montserrat">
             Showing {filteredAndSortedArtworks.length} of {data.artworks.length} artworks
           </p>
         </div>
@@ -141,7 +164,7 @@ const Gallery = () => {
             <div className="w-16 h-16 mx-auto mb-4 royal-gradient rounded-full flex items-center justify-center">
               <Search className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-playfair font-semibold text-gray-600 mb-2">
+            <h3 className="text-xl font-cormorant font-semibold text-gray-600 mb-2">
               No artworks found
             </h3>
             <p className="text-gray-500">
@@ -153,15 +176,21 @@ const Gallery = () => {
             {filteredAndSortedArtworks.map((artwork, index) => (
               <div 
                 key={artwork.id}
-                className="animate-scale-in"
+                className="animate-fade-in-up"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
-                <ArtworkCard artwork={artwork} />
+                <EnhancedArtworkCard artwork={artwork} />
               </div>
             ))}
           </div>
         )}
       </div>
+
+      {/* Shopping Cart Sidebar */}
+      <ShoppingCartComponent 
+        isOpen={isCartOpen} 
+        onClose={() => setIsCartOpen(false)} 
+      />
     </div>
   );
 };
